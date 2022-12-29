@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+.navbarBg{
+    background-color: #191818;
+    color: #D49834;
+}
+
+.navbarBrandHref{
+    text-decoration: none;
+}
+
+.navbarBrand{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    color: #D49834;
+}
+
+.navbarBrand:hover{
+    color: #D49834 !important;
+}
+
+.navItem{
+    padding-right: 50px;
+}
+
+.navLink{
+    color: #D49834 !important;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.navLinkActive:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: -5px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 70%;
+    background: #D49834;
+}
+
+.metamaskLogo{
+    width: 1.5rem;
+    margin-right: 10px;
+}
+
+.metamaskBtn{
+    border-color: #D49834 !important;
+    border-radius: 0;
+    color: #D49834 !important;
+    padding: .5rem 1.5rem;
+}
+
+
+@media(max-width:460px){
+    .navLinkActive:after {
+        left: unset;
+        width: 46px;
+    }
+    .navItem{
+        padding-right: 0;
+    }
+}

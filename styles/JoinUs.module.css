@@ -1,0 +1,20 @@
+.joinUs{
+    font-family: 'Noto Sans', sans-serif;
+    background: #191818;
+}
+
+.joinUsContainer{
+    height: 70vh;
+    background-image: url("../public/closeup-shot-two-people-clinking-glasses-with-alcohol-toast.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.discordLogo{
+    width: 30px;
+}
+
+.header{
+    font-family: 'Playfair Display', serif;
+}

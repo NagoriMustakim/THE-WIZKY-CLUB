@@ -1,0 +1,211 @@
+.body {
+    color: #fff;
+    background-color: #191818;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.textWrapper {
+    margin: 0 2rem;
+}
+
+.header {
+    color: #CE9A60;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 2rem;
+    font-size: 48px;
+}
+
+.paragraph {
+    margin-bottom: 5rem;
+}
+
+.lineContainer {
+    width: 100%;
+}
+
+.whiteLine {
+    border: 1px solid #D9D9D9;
+    margin: 20px;
+}
+
+.yellowLine {
+    border: 1px solid #CE9A60;
+}
+
+.tastingLink {
+    text-decoration: none;
+    color: #CE9A60;
+    background-color: transparent;
+    border: none;
+}
+
+.tastingLink:hover {
+    color: #D49834;
+}
+
+.arrowIcon {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 66px;
+}
+
+
+.table {
+    color: #fff;
+}
+
+.whiteVerticalLine {
+    margin: 20px;
+    border-left: 1px solid #D9D9D9
+}
+
+.yellowVerticalLine {
+    border-left: 1px solid #CE9A60
+}
+
+/*Timeline v1*/
+
+.timelineCircle {
+    background-color: #191818;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    cursor: pointer;
+}
+
+.timelineCircleActive {
+    background-color: #D9D9D9;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: #191818;
+}
+
+.timelineDate {
+    color: #D49834;
+    font-size: 14px;
+}
+
+.timelineDivider {
+    border-top: 1px solid #fff;
+}
+
+/*Timeline v3*/
+.subHeader {
+    font-family: 'Playfair Display', serif;
+
+}
+
+.timeline {
+    margin-top: 50px;
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+.timeline li {
+    transition: all 200ms ease-in;
+}
+
+.timestamp {
+    width: 100%;
+    position: absolute;
+    bottom: 185px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.textInactive {
+    opacity: 0.5;
+}
+
+.textActive {
+    opacity: 1;
+}
+
+.status {
+    padding: 0px 40px;
+    display: flex;
+    justify-content: center;
+    border-top: 4px solid #3a3939;
+    position: relative;
+    transition: all 200ms ease-in;
+    height: 20px;
+}
+
+.status span {
+    padding-top: 20px;
+}
+
+.status span:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-color: #3a3939;
+    border-radius: 25px;
+    border: 4px solid #3a3939;
+    position: absolute;
+    top: -15px;
+    left: calc(50% - 12px);
+    transition: all 200ms ease-in;
+    opacity: 1 !important;
+    cursor: pointer;
+}
+
+.activeStatus:before {
+    border: 4px solid #D49834 !important;
+    background-color: #D49834 !important;
+}
+
+.swiperContainer {
+    width: 100%;
+    height: 300px;
+    margin: 50px 0;
+    overflow: hidden;
+}
+
+.swiperSlide {
+    width: 200px;
+    font-size: 18px;
+    padding-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.noSelect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+
+.bottomTimelineContainer {
+    position: absolute;
+    padding-top: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.timelineDateTitle {
+    font-size: 1rem;
+    color: #D49834;
+}
+
+.timelineTitle {
+    font-size: 1.2rem;
+    color: #D49834;
+}
+
+
+.knowMore {
+    background-image: url("../public/closeup-shot-two-people-clinking-glasses-with-alcohol-toast.png");
+}
+

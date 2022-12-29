@@ -1,0 +1,29 @@
+.footerNav{
+    background-color: #D9D9D9;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.footerBrand{
+    color: #000 !important;
+    font-family: 'Playfair Display', serif;
+}
+
+.footerLink{
+    text-decoration: none;
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.iconBtn {
+    width: 50px;
+}
+
+.copyrightContainer{
+    background-color: #000;
+}
+
+.copyrightText{
+    font-size: 12px;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+}

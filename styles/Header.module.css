@@ -1,0 +1,182 @@
+.header {
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.headerBackground {
+    height: 100vh;
+    background-image: url("../public/header_background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .4);
+}
+
+.headerHeading {
+    font-family: 'Playfair Display', serif;
+}
+
+.headerParagraph {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+}
+
+.iconBtn {
+    width: 50px;
+}
+
+.HeaderModalContent {
+    border-radius: 1rem;
+    background-color: black;
+}
+
+.btnClose {
+    background: transparent url("../public/icons/btn-close.svg") center/1em auto no-repeat
+}
+
+.modalHeader {
+    border-bottom: 0;
+}
+
+.modalFooter {
+    border-top: 0;
+}
+
+.modalBody {
+    color:white;
+    text-align: center;
+}
+
+.imgIconLogoMintNow {
+    width: 50%;
+}
+
+.modalHeaderText {
+    color: #CE9A60;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 28px;
+    margin-top: 2rem;
+}
+
+.modalTextInside {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+
+}
+
+.modalButtonMint {
+    background: #D49834;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+
+}
+
+.modalFirstTab {
+    background: rgba(236, 233, 233, 0.3);
+    color: rgba(245, 245, 245, 0.5);
+}
+
+.modalFirstTab:has(.active) {
+    background: #F2EDE3!important;    
+    color: #D49834!important;
+}
+
+.modalSecondTab {
+    background: rgba(236, 233, 233, 0.3);
+    color: rgba(245, 245, 245, 0.5);
+
+}
+
+.modalBodyMintContent {
+    border-bottom: 0;
+}
+
+.tabList {
+    border-bottom: 0;
+
+}
+
+.tabContent {
+    margin-top: 2rem;
+}
+
+.modalTextPadding {
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.btnModalConnect {
+    background: #D49834;
+    color: #333333;
+    
+
+}
+
+.modalNumberInput {
+    color: #D49834;
+
+}
+
+@media(min-width: 100px) {
+    .headerHeading {
+        font-size: 2rem;
+    }
+    .btnCounterBorder {
+        border: 1px solid rgba(212, 152, 52, 0.2);
+        border-radius: 3px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .minusCounter {
+        /* color: #D */
+        color: #D49834;
+        font-size: 2rem;
+        margin-right:3rem;
+        line-height: 1;
+        font-family: monospace;
+        padding-bottom: 10px;
+    }
+    
+    .plusCounter {
+        color: #D49834;
+        font-size: 2rem;
+        margin-left: 3rem;
+        line-height: 1;
+        padding-bottom: 10px;
+    }
+
+    
+    .hitungCounter {
+        color: #D49834;
+        font-size: 1.2rem;
+        margin-top:1rem;
+    }
+
+}
+
+@media(min-width: 768px) {
+    .headerHeading {
+        font-size: 4rem;
+    }
+    .btnCounterBorder {
+        border: 1px solid rgba(212, 152, 52, 0.2);
+        border-radius: 3px;
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+
+}

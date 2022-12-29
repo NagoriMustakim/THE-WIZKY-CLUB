@@ -1,0 +1,57 @@
+
+.faqHeader {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+}
+
+.faqTextContent {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.faqContent {
+    color: #D49834;
+}
+
+.spacingContent {
+    /*padding: 5rem;*/
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.backgroundColor {
+    color: black;
+    background-color: transparent;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.borderBottom {
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.leafBackgroundPhoto {
+    background: url('../public/faq/leaf-group.png');
+    /*background-position: center; !* Center the image *!*/
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+.backgroundTransparent{
+    background:transparent;
+}
+
+.headerFaqBottom {
+    font-family: 'Playfair Display', serif;
+}
+
+.btnEmailUs {
+    background-color: #D49834;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight:500;
+
+}
+
+.faqBottomMargin {
+    margin-bottom: 5rem;
+}

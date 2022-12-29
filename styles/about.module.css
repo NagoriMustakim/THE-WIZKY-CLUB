@@ -1,0 +1,65 @@
+.numberAboutWizky,
+.numberVisionWizky{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    font-size: 200px;
+    color: black;
+    opacity: 0.1;
+}
+
+.numberAboutWizky {
+    top: -7rem;
+    left: -2rem;
+}
+
+.numberVisionWizky {
+    top: -7rem;
+    left: -3rem;
+}
+
+.headerAbout {
+    color: #D49834;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.leafGroup {
+    background: url('../public/about/leaf-group.png');
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    margin-bottom: 10rem;
+}
+
+.textContent {
+    font-family: Noto Sans, sans-serif;
+    color: #191818;
+    font-size: 20px;
+    margin-top: 2rem;
+}
+
+.aboutWizkyContent {
+    margin-bottom: 5rem;
+}
+
+.linkWhitepaper {
+    font-family: Noto Sans, sans-serif;
+    font-weight:800;
+    color: #585858;
+    /*margin-top: 2rem;*/
+}
+
+
+@media (min-width: 768px ) {
+    .ourVisionContent {
+        padding-left: inherit;
+    }
+}
+
+
+@media (min-width: 768px ) {
+    .ourVisionContent {
+        padding-left: 5rem;
+    }
+}
+

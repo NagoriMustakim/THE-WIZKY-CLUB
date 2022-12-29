@@ -1,0 +1,17 @@
+image: ubuntu
+
+build-app:
+  stage: build
+  before_script:
+    - 'which ssh-agent ||  (apt update; apt upgrade -y; apt -y install git curl openssh-client)'
+    - eval $(ssh-agent -s)
+    - echo "$PRIVKEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - touch ~/.ssh/known_hosts
+    - chmod 700 ~/.ssh
+    - ssh-keygen -R $HOST
+    - ssh-keyscan $HOST >> ~/.ssh/known_hosts
+  script:
+    - ssh $USER@$HOST "cd /var/www/html/wizky-website-v2 && git checkout master && git pull origin master && sudo chmod +x build.sh && bash build.sh"
+  only:
+    - master

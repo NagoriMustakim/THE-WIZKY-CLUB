@@ -1,0 +1,18 @@
+image: ubuntu:latest
+
+before_script:
+  - 'which ssh-agent || (apt update; apt upgrade -y; apt -y install openssh-client git curl)'
+  - eval $(ssh-agent -s)
+  - echo "$PRIVKEY" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - touch ~/.ssh/known_hosts
+  - ssh-keygen -R $HOST
+  - ssh-keyscan $HOST >> ~/.ssh/known_hosts
+
+build-app:
+  stage: build
+  script:
+    - git checkout master; git pull master
+  only:
+    - master
