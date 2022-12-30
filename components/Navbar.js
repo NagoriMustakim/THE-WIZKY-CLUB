@@ -56,103 +56,9 @@ export default (props) => {
         }
     }, [web3]);
 
-    useEffect(() => {
-        const getInfo = async () => {
-            const contract = new web3.eth.Contract(contractABI, contractAddress);
 
-            const proof = await axios
-                .get(`https://wizky-backend.vercel.app/get/${currentAcc}`)
-                .then((res) => {
-                    return res.data.proof;
-                });
-            await contract.methods
-                .isWhitelist(proof)
-                .call({from: currentAcc})
-                .then((res) => {
-                    setWhitelist(res);
-                })
-                .catch((err) => {
-                    toast.error(err, {theme: "dark"});
-                });
-        };
 
-        if (currentAcc) {
-            getInfo();
-        } else {
-            setWLCount(1);
-            setPublicCount(1);
-        }
-    }, [currentAcc, web3]);
-
-    useEffect(() => {
-        if (web3) {
-            const contract = new web3.eth.Contract(contractABI, contractAddress);
-
-            const interval = setInterval(async () => {
-                await contract.methods
-                    .paused()
-                    .call()
-                    .then((res) => {
-                        setState(res);
-                    })
-                    .catch((err) => {
-                        toast.error(err, {theme: "dark"});
-                    });
-
-                await contract.methods
-                    .whitelistPrice()
-                    .call()
-                    .then((res) => {
-                        setWLPrice(res / 10 ** 18);
-                    })
-                    .catch((err) => {
-                        toast.error(err, {theme: "dark"});
-                    });
-
-                await contract.methods
-                    .publicPrice()
-                    .call()
-                    .then((res) => {
-                        setPublicPrice(res / 10 ** 18);
-                    })
-                    .catch((err) => {
-                        toast.error(err, {theme: "dark"});
-                    });
-
-                await contract.methods
-                    .mintedWL()
-                    .call()
-                    .then((res) => {
-                        setMintedWL(Number(res));
-                    })
-                    .catch((err) => {
-                        toast.error(err, {theme: "dark"});
-                    });
-
-                await contract.methods
-                    .WLAmount()
-                    .call()
-                    .then((res) => {
-                        setWLAmount(Number(res));
-                    })
-                    .catch((err) => {
-                        toast.error(err, {theme: "dark"});
-                    });
-
-                await contract.methods
-                    .totalSupply()
-                    .call()
-                    .then((res) => {
-                        setTotalSupply(Number(res));
-                    })
-                    .catch((err) => {
-                        toast.error(err, {theme: "dark"});
-                    });
-            }, 1000);
-            return () => clearInterval(interval);
-        }
-    }, [web3]);
-
+   
     const handleConnectWallet = async () => {
         if (provider) {
             await provider.request({method: `eth_requestAccounts`});
@@ -163,72 +69,7 @@ export default (props) => {
         }
     };
 
-    const MintNFT = async (price) => {
-        if (currentAcc) {
-            setLoading(true);
-            const contract = new web3.eth.Contract(contractABI, contractAddress);
-
-            const proof = await axios
-                .get(`https://wizky-backend.vercel.app/get/${currentAcc}`)
-                .then((res) => {
-                    return res.data.proof;
-                });
-
-            const isWhitelisted = await contract.methods
-                .isWhitelist(proof)
-                .call({from: currentAcc});
-
-            if (isWhitelisted) {
-                await contract.methods
-                    .whitelistMint(wlCount, proof)
-                    .send({
-                        from: currentAcc,
-                        value: await web3.utils.toWei(
-                            (((price * wlCount).toFixed(4) * 10000) / 10000).toString(),
-                            "ether"
-                        ),
-                    })
-                    .on("receipt", function (receipt) {
-                        toast("Mint success!");
-                        setWLCount(1);
-                        setLoading(false);
-                    })
-                    .on("error", function (error) {
-                        toast.error("Mint failure!", {
-                            theme: "dark",
-                        });
-                        setWLCount(1);
-                        setLoading(false);
-                    });
-            } else {
-                await contract.methods
-                    .mintItem(publicCount)
-                    .send({
-                        from: currentAcc,
-                        value: await web3.utils.toWei(
-                            (((price * publicCount).toFixed(4) * 10000) / 10000).toString(),
-                            "ether"
-                        ),
-                    })
-                    .on("receipt", function (receipt) {
-                        toast("Mint success!");
-                        setPublicCount(1);
-                        setLoading(false);
-                    })
-                    .on("error", function (error) {
-                        toast.error("Mint failure!", {
-                            theme: "dark",
-                        });
-                        setPublicCount(1);
-                        setLoading(false);
-                    });
-            }
-            // }
-        } else {
-            handleConnectWallet();
-        }
-    };
-
+  
 
     //Set Active Link
 
