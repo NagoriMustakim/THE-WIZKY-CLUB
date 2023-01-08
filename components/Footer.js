@@ -26,9 +26,9 @@ function Footer(props) {
                     </div>
 
                     <div className={`col-lg-3 col-12 mb-lg-0 mb-3 text-center`}>
-                        <a href="https://twitter.com/TheWizkyClub" target="_blank" className={``}><img src="/icons/twitter-rev.png" className={`${styles.iconBtn} img-fluid`}/></a>
-                        <a href="https://discord.gg/V33GbcwFvE" target="_blank" className={`ms-3`}><img src="/icons/discord-rev.png" className={`${styles.iconBtn} img-fluid`}/></a>
-                        <a href="https://www.instagram.com/thewizkyclub/" target="_blank" className={`ms-3`}><img src="/icons/instagram-rev.png" className={`${styles.iconBtn} img-fluid`}/></a>
+                        <a href="#" target="_blank" className={``}><img src="/icons/twitter-rev.png" className={`${styles.iconBtn} img-fluid`} /></a>
+                        <a href="#" target="_blank" className={`ms-3`}><img src="/icons/discord-rev.png" className={`${styles.iconBtn} img-fluid`} /></a>
+                        <a href="#" target="_blank" className={`ms-3`}><img src="/icons/instagram-rev.png" className={`${styles.iconBtn} img-fluid`} /></a>
                     </div>
                 </div>
             </div>

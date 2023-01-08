@@ -12,7 +12,7 @@ function JoinUs(props) {
 
                         <p className={`text-white mb-4`}>Join our Discord to speak with us today!</p>
 
-                        <a href="https://discord.gg/V33GbcwFvE" target="_blank" className={`btn btn-warning rounded-0`}><img src="/icons/discord_logo.png" className={`${styles.discordLogo} me-2`}/>Join Discord</a>
+                        <a href="" target="_blank" className={`btn btn-warning rounded-0`}><img src="/icons/discord_logo.png" className={`${styles.discordLogo} me-2`}/>Join Discord</a>
                     </div>
                 </div>
             </div>

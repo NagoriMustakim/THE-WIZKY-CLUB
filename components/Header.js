@@ -14,13 +14,10 @@ function Header(props) {
     const [currentAcc, setCurrentAcc] = useState(null)
     const [signer, setSigner] = useState(null)
     const [signerAddress, setSignerAddress] = useState(null)
-    const [provider, setProvider] = useState(null)
-    const [contract, setContract] = useState(null)
     const [whitelistPrice, setWhitelistPrice] = useState(0)
     const [whitelistAmount, setWhitelistAmount] = useState(0)
     const [whitelistMinted, setWhitelistMinted] = useState(0)
     const [loading, setLoading] = useState(false)
-    const [isWhitelist, setIsWhitelist] = useState(false)
     //noramal minting
     const [publicPrice, setPublicPrice] = useState(0)
     const [pulbicSupply, setPublicSupply] = useState(0)
@@ -165,9 +162,8 @@ function Header(props) {
         if (typeof window.ethereum !== "undefined") {
             try {
                 const provider = new ethers.providers.Web3Provider(window.ethereum)
-                setProvider(provider)
                 const contract = new ethers.Contract(contractAddress, contractABI, provider);
-                setContract(contract)
+               
                 //whitelist minting 
                 const whitelistPrice = await contract.whitelistPrice()
                 const whitelistAmount = await contract.WLAmount()

@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '/styles/Navbar.module.css'
-import {toast, ToastContainer} from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Web3 from "web3";
 import axios from "axios";
@@ -15,21 +15,11 @@ export default (props) => {
     const [provider, setProvider] = useState(null);
     const [web3, setWeb3] = useState(null);
     const [currentAcc, setCurrentAcc] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [isWhitelist, setWhitelist] = useState(false);
-    const [publicPrice, setPublicPrice] = useState(0);
-    const [whitelistPrice, setWLPrice] = useState(0);
-    const [state, setState] = useState(true);
-    const [wlCount, setWLCount] = useState(1);
-    const [publicCount, setPublicCount] = useState(1);
-    const [mintedWL, setMintedWL] = useState(0);
-    const [WLAmount, setWLAmount] = useState(0);
-    const [totalSupply, setTotalSupply] = useState(0);
     const [loginWizky, setLoginWizky] = useState('');
     const [textWizky, setTextWizky] = useState('');
 
     useEffect(() => {
-        const {ethereum} = window;
+        const { ethereum } = window;
 
         if (ethereum && ethereum.isMetaMask) {
             setProvider(ethereum);
@@ -58,10 +48,10 @@ export default (props) => {
 
 
 
-   
+
     const handleConnectWallet = async () => {
         if (provider) {
-            await provider.request({method: `eth_requestAccounts`});
+            await provider.request({ method: `eth_requestAccounts` });
         } else {
             toast.error("Please install Metamask wallet in this browser", {
                 theme: "dark",
@@ -69,7 +59,7 @@ export default (props) => {
         }
     };
 
-  
+
 
     //Set Active Link
 
@@ -102,24 +92,24 @@ export default (props) => {
             setLoginWizky(<img src='/metamask-logo.png' className={`${styles.metamaskLogo}`} />);
             setTextWizky(' Metamask')
         }
-        
+
     })
 
-    
+
     return (
         <nav className={`navbar navbar-expand-lg navbar-dark ${styles.navbarBg}`}>
             <div className="container-fluid mx-5 my-4">
                 <a href="/" className={`${styles.navbarBrandHref}`}><h1 className={`${styles.navbarBrand}`}>The Wizky Club</h1></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto text-end mb-2 mb-lg-0">
                         <li className={`nav-item ${styles.navItem}`}>
                             <a className={`nav-link ${styles.navLink} ${activeLink}`} aria-current="page"
-                               href="/">Home</a>
+                                href="/">Home</a>
                         </li>
                         <li className={`nav-item ${styles.navItem}`}>
                             <a className={`nav-link ${styles.navLink} ${activeLinkAbout}`} href="/about">About</a>
@@ -141,8 +131,8 @@ export default (props) => {
                     </ul>
                 </div>
             </div>
-            
-            <ToastContainer/>
+
+            <ToastContainer />
         </nav>
     );
 }
