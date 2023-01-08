@@ -112,7 +112,6 @@ function Header(props) {
         console.log(`{Current Account: ${signerAddress}`);
         //bug
         const isWhitelist1 = await con.isWhitelist(signerAddress);
-        setIsWhitelist(isWhitelist1);
         if (isWhitelist1) {
             try {
 
